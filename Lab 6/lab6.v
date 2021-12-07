@@ -86,9 +86,9 @@ module module_test(
     wire da,db,dc,dd,de,df,dg;
 
     fulladder firstAdder(a0, b0, 0, carry0, s0);
-    fulladder secondAdder(a1, b1, carry0, carry1, s1);
-    fulladder thirdAdder(a2, b2, carry1, carry2, s2);
-    fulladder fourthAdder(a3, b3, carry2, cout, s3);
+    fulladder secondAdder(a1, b1, cin1, cin2, s1);
+    fulladder thirdAdder(a2, b2, cin2, cin3, s2);
+    fulladder fourthAdder(a3, b3, cin3, cout, s3);
     display_setup generate1(s3, s2, s1, s0, da, db, dc, dd, de, df, dg);
     
     assign CA=~da;
